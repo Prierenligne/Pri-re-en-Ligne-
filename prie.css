@@ -1,0 +1,180 @@
+/* Styles de base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Conteneur principal */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Styles pour l'accueil */
+section#accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    background-image: url('votre-image-de-fond.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+section#accueil div {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+/* Styles pour la section des fonctionnalités */
+#nos-fonctionnalites {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nos-fonctionnalites h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.fonctionnalite {
+    margin-bottom: 30px;
+}
+
+.fonctionnalite h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Flexbox pour deux boîtes par ligne */
+.prieres-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.priere-box {
+    flex: 1 1 calc(50% - 40px);
+    background-color: #FF6347;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.priere-box a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.priere-box a:hover {
+    color: #FFD700;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .priere-box {
+        flex: 1 1 100%;
+    }
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Conteneur principal pour les boîtes de prière */
+.prieres-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.priere-box {
+    flex: 1 1 calc(50% - 40px);
+    background-color: #FF6347;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer; /* Curseur de clic */
+}
+
+.priere-box a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.priere-box a:hover {
+    color: #FFD700;
+}
+
+/* Contenu caché */
+.priere-content {
+    display: none; /* Masquer par défaut */
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Styles réactifs pour les petits écrans */
+@media (max-width: 768px) {
+    .priere-box {
+        flex: 1 1 100%;
+    }
+}
